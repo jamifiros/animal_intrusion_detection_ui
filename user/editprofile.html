@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <!-- font font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="userStyle.css">
+  <link rel="stylesheet" href="media.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+      <div class="logoToggle">
+            <h1>Wild</h1>
+      <div class="toggle-btn" onclick="toggleSidebar()">&#9776;</div>
+      </div>
+
+  <!-- Toggle button for mobile view -->
+ 
+  <!-- logout -->
+ <div class="toplogout">
+      <h1>wild</h1>
+      <div class="logout">
+            <a href="#"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+          </div>
+ </div>
+</div>
+
+<div class="sidebar">
+      <div class="profile-icon">
+        <div class="icon"><i class="fa-solid fa-user"></i></div>
+      </div>
+
+      <div class=" links">
+        <a href="userHome.html" class=" link home"><span>Home</span> <i class="fas fa-home"></i></a>
+        <a href="editprofile.html" class=" link"><span>Notification preferences</span><i class="fas fa-bell"></i></a>
+        <a href="history.html" class=" link"><span>Historical Data</span><i class="fas fa-history"></i></a>
+        <a href="weather.html" class=" link"><span>Weather informations</span><i class="fas fa-sun"></i></a>
+      </div>
+
+      <div class="profile-links">
+        <a href="editprofile.html" class="link"><span>Edit Profile</span><i class="fas fa-edit"></i></a>
+      </div>
+     
+      <!-- mobile view logout -->
+      <div class="sidelogoutdiv">
+            <a href="#" class="link sidelogout"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="profile-icon">
+        <div class="icon"><i class="fa-solid fa-user"></i></div>
+      </div>
+
+      <div class=" links">
+        <a href="userHome.html" class=" link"><span>Home</span> <i class="fas fa-home"></i></a>
+        <a href="#" class=" link"><span>Notification preferences</span><i class="fas fa-bell"></i></a>
+        <a href="history.html" class=" link"><span>Historical Data</span><i class="fas fa-history"></i></a>
+        <a href="weather.html" class=" link"><span>Weather informations</span><i class="fas fa-sun"></i></a>
+      </div>
+
+      <div class="profile-links">
+        <a href="editprofile.html" class="link"><span>Edit Profile</span><i class="fas fa-edit"></i></a>
+      </div>
+     
+      
+      <!-- mobile view logout -->
+      <div class="sidelogoutdiv">
+            <a href="#" class="link sidelogout">Logout  <i class="fa-solid fa-sign-out-alt"></i></a>
+      </div>
+    </div>
+
+<!-- Content -->
+<div class="content">
+  <div class="main-cnt">
+   
+    <!-- edit profile -->
+    <div class="wrapper">
+      <div class="title">
+         register Form
+      </div>
+      <form action="userHome.html">
+           <div class="field">
+                 <input type="text" value="john" required>
+                 <label>Name</label>
+           </div>
+
+           <div class="field">
+            <input type="text" value="abc home , city"  required>
+            <label>Address</label>
+         </div>
+
+         <div class="field">
+            <input type="text" required value="abc@gmail.com">
+            <label>Email Address</label>
+         </div>
+
+         <div class="field">
+           <input type="number" inputmode="numeric" pattern="[0-9]*" maxlength="10" value="0123456789" required>
+           <label>Mobile</label>
+       </div>
+         <div class="field">
+            <input type="submit" value="Save">
+         </div>
+        
+      </form>
+   </div>
+   
+  </div>
+</div>
+
+<script>
+  function toggleSidebar() {
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = (sidebar.style.display === 'none' || sidebar.style.display === '') ? 'block' : 'none';
+  }
+  function toggleProfileLinks() {
+    var profileLinks = document.querySelector('.profile-links');
+    profileLinks.style.display = (profileLinks.style.display === 'none' || profileLinks.style.display === '') ? 'block' : 'none';
+  }
+  function toggleProfileLinkss() {
+    var profileLinkss = document.querySelector('.profile-linkss');
+    profileLinkss.style.display = (profileLinkss.style.display === 'none' || profileLinkss.style.display === '') ? 'block' : 'none';
+  }
+
+</script>
+
+</body>
+</html>

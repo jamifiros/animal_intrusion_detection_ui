@@ -1,0 +1,48 @@
+/* Media query for mobile view */
+@media screen and (max-width: 600px) {
+      .sidebar {
+        display: none;
+      }
+    .logoToggle h1{
+          display: none;
+    }
+      .toggle-btn {
+          display: inline;
+          cursor: pointer;
+        font-size: 24px;
+        font-weight: 800;
+        color: white;
+        margin-right: 10px;
+      }
+       /* Content styles */
+    .content {
+      margin-left: 0;
+    }
+    .logout{
+          display: none;
+    }
+    .side{
+      display: none;
+    }
+      
+    }
+    
+    @media screen and (min-width:601px) {
+          .navbar .toggle-btn{
+                display: none;
+                color:#fff
+          }
+    
+          .sidelogoutdiv{
+                display: none;
+          }
+    
+          .toplogout h1{
+                display: none;
+          }
+          
+          .side{
+            display: block;
+          }
+    }
+    

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Home Page</title>
+  <!-- font font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="adminStyle.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+      <div class="logoToggle">
+            <h1>Wild</h1>
+      <div class="toggle-btn" onclick="toggleSidebar()">&#9776;</div>
+      </div>
+
+  <!-- Toggle button for mobile view -->
+ 
+  <!-- logout -->
+ <div class="toplogout">
+      <h1>wild</h1>
+      <div class="logout">
+            <a href="#"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+          </div>
+ </div>
+</div>
+
+<div class="sidebar">
+
+      <div class=" links">
+            <a href="adminHome.html" class=" link"><span>Home</span> <i class="fas fa-home"></i></a>
+            <a href="users.html" class=" link"><span>Users</span><i class="fas fa-user"></i></a>
+            <a href="addData.html" class="link"><span>Animal Data set</span> <i class="fas fa-paw"></i></a>
+            <a href="report.html" class=" link"><span>System Report</span><i class="fas fa-file-alt"></i></a>
+      </div>
+     
+     
+      <!-- mobile view logout -->
+      <div class="sidelogoutdiv">
+            <a href="#" class="link sidelogout"><i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="profile-icon">
+        <div class="icon"><i class="fa-solid fa-user"></i></div>
+      </div>
+
+      <div class=" links">
+            <a href="adminHome.html" class=" link"><span>Home</span> <i class="fas fa-home"></i></a>
+            <a href="users.html" class=" link"><span>Users</span><i class="fas fa-user"></i></a>
+            <a href="addData.html" class="link"><span>Animal Data set</span> <i class="fas fa-paw"></i></a>
+            <!-- <a href="report.html" class=" link"><span>System Report</span><i class="fas fa-file-alt"></i></a> -->
+      </div>
+     
+      
+      <!-- mobile view logout -->
+      <div class="sidelogoutdiv">
+            <a href="#" class="link sidelogout">Logout  <i class="fa-solid fa-sign-out-alt"></i></a>
+      </div>
+    </div>
+
+<!-- Content -->
+<div class="content">
+  <div class="main-cnt">
+     <button class="modal-btn" onclick="openModal()">Add <br>Data set</button>
+
+     <div class="modal" id="myModal">
+      <div class="modal-content">          
+          <form action="#" class="addAnimal">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+
+              <label for="name">Animal: </label>
+              <input type="text" name="name" id="name" placeholder="Animal name here" required><br>
+        
+              <label for="image">Image: </label>
+              <input type="file" name="image[]" id="image">
+              <button type="button" onclick="addMoreImages()" class="add">Add more images</button><br>
+              <br>
+        
+             <div id="additionalImages"></div>
+             <input type="submit" class="submit" value="Submit">
+          </form>
+      </div>
+  </div>
+
+
+      <div class="card-container">
+                  <!-- loop here -->
+
+                  <div class="card">
+                      <img src="https://cdn.firstcry.com/education/2022/04/25155522/1378635314.jpg" alt="Card Image">
+                      <div class="card-content">
+                        <a href="data-details.html"><button class="cnt-btn">Tiger</button></a>
+                      </div>
+                  </div>
+          
+                  <div class="card">
+                      <img src="https://www.thoughtco.com/thmb/vzcng2bVVb9uay9rDZx8pNZ8kcE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/african-elephants-loxodonta-africana-mother-and-calf-standing-side-by-side-kenya-africa-135630155-58d719413df78c516258bde3.jpg" alt="Card Image">
+                      <div class="card-content">
+                        <a href="data-details.html"><button class="cnt-btn">Elephant</button></a>
+                      </div>
+                  </div>
+
+                  <div class="card">
+                        <img src="https://media.istockphoto.com/id/1216450027/photo/alert-wild-boar-looking-into-camera-on-green-glade-in-summer.jpg?s=612x612&w=0&k=20&c=EYoAGGEGJF6pkbHcJ1XQ5MTj8DyqcVY5rpYiTQVo13Y=" alt="Card Image">
+                        <div class="card-content">
+                              <a href="data-details.html"><button class="cnt-btn">Wild Boar</button></a>
+                            </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/A_chital_stag_1.JPG" alt="Card Image">
+                        <div class="card-content">
+                              <a href="data-details.html"><button class="cnt-btn">Deer</button></a>
+                            </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://facts.net/wp-content/uploads/2021/08/Portrait-of-a-Monkey-389813-pixahive-1024x725-1.jpg" alt="Card Image">
+                        <div class="card-content">
+                              <a href="data-details.html"><button class="cnt-btn">Monkey</button></a>
+                            </div>
+                    </div>
+
+          
+                  
+              </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  function toggleSidebar() {
+    var sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = (sidebar.style.display === 'none' || sidebar.style.display === '') ? 'block' : 'none';
+  }
+
+  
+
+    // Function to open the modal
+    function openModal() {
+        document.getElementById("myModal").style.display = "flex";
+        
+    }
+
+    var maxImages = 12; // Set the maximum number of images
+
+        function addMoreImages() {
+            var additionalImagesDiv = document.getElementById("additionalImages");
+            var currentImageCount = additionalImagesDiv.getElementsByTagName("input").length;
+
+            if (currentImageCount < maxImages) {
+                var newInput = document.createElement("input");
+                newInput.type = "file";
+                newInput.name = "image[]";
+                newInput.id = "image";
+
+                additionalImagesDiv.appendChild(newInput);
+            } else {
+                // Display an alert when the maximum number of images is reached
+                alert("You can only add up to " + maxImages + " images.");
+            }
+        }
+
+
+     // Function to close the modal
+     function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+
+    // Close the modal if clicked outside of it
+    window.onclick = function (event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+</script>
+
+</body>
+</html>
